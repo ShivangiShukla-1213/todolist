@@ -7,11 +7,8 @@ app.use(express.json())
 
 // Available routes for api
 app.use('/api/auth', require('./routes/auth'))
+app.use('/api/note', require('./routes/note'))
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
 });
-
-const connectToMongo = require('./db');
-connectToMongo();
-
